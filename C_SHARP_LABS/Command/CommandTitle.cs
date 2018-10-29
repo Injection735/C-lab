@@ -9,7 +9,6 @@ namespace C_SHARP_LABS.Command
 {
 	class CommandTitle : CommandBase
 	{
-		public const string TITLE = "title";
 		public CommandTitle(string type, List<string> parameters) : base(type, parameters)
 		{
 		}

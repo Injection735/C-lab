@@ -18,7 +18,7 @@ namespace C_SHARP_LABS.Command
 			{ "-all", "Вывести всю базу"},
 		};
 
-		public CommandHelp() : base("help", new List<string>())
+		public CommandHelp(string type) : base(type, new List<string>())
 		{
 		}
 

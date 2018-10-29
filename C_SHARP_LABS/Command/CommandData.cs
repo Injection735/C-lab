@@ -51,9 +51,9 @@ namespace C_SHARP_LABS.Command
 					return new CommandDate(type, parameters);
 				case "h":
 				case HELP:
-					return new CommandHelp();
+					return new CommandHelp(type);
 				case ALL:
-					return new CommandAll();
+					return new CommandAll(type);
 				default:
 					return new CommandError();
 			}
