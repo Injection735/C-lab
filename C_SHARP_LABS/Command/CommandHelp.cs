@@ -15,6 +15,7 @@ namespace C_SHARP_LABS.Command
 			{ "-title, -t", "Поиск по имени или по первым символам"},
 			{ "-paradigm, -p", "Поиск по парадигме"},
 			{ "-date, -d", "Поиск дате создания"},
+			{ "-all", "Вывести всю базу"},
 		};
 
 		public CommandHelp() : base("help", new List<string>())

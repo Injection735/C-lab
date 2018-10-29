@@ -12,7 +12,8 @@ namespace C_SHARP_LABS.Command
 		public const string TITLE = "title";
 		public const string PARADIGM = "paradigm";
 		public const string DATE = "date";
-		public const string HELP = "help";
+		public const string HELP = "help";   
+		public const string ALL = "all";
 
 		public static void init()
 		{
@@ -51,6 +52,8 @@ namespace C_SHARP_LABS.Command
 				case "h":
 				case HELP:
 					return new CommandHelp();
+				case ALL:
+					return new CommandAll();
 				default:
 					return new CommandError();
 			}
