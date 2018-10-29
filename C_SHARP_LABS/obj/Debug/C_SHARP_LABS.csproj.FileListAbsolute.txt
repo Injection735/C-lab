@@ -1,0 +1,7 @@
+C:\Users\injection735\source\repos\C_SHARP_LABS\C_SHARP_LABS\obj\Debug\C_SHARP_LABS.csprojAssemblyReference.cache
+C:\Users\injection735\source\repos\C_SHARP_LABS\C_SHARP_LABS\obj\Debug\C_SHARP_LABS.csproj.CoreCompileInputs.cache
+C:\Users\injection735\source\repos\C_SHARP_LABS\C_SHARP_LABS\bin\Debug\C_SHARP_LABS.exe.config
+C:\Users\injection735\source\repos\C_SHARP_LABS\C_SHARP_LABS\bin\Debug\C_SHARP_LABS.exe
+C:\Users\injection735\source\repos\C_SHARP_LABS\C_SHARP_LABS\bin\Debug\C_SHARP_LABS.pdb
+C:\Users\injection735\source\repos\C_SHARP_LABS\C_SHARP_LABS\obj\Debug\C_SHARP_LABS.exe
+C:\Users\injection735\source\repos\C_SHARP_LABS\C_SHARP_LABS\obj\Debug\C_SHARP_LABS.pdb
