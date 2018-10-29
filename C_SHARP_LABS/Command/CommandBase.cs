@@ -15,10 +15,7 @@ namespace C_SHARP_LABS.Command
 		public string type
 		{
 			get => _type == "" ? ERROR : _type; 
-			set
-			{
-				_type = value;
-			}
+			set => _type = value;
 		}
 
 		protected string _type;

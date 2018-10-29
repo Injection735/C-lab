@@ -9,6 +9,7 @@ namespace C_SHARP_LABS.Command
 {
 	class CommandTitle : CommandBase
 	{
+		public const string TITLE = "title";
 		public CommandTitle(string type, List<string> parameters) : base(type, parameters)
 		{
 		}
@@ -18,19 +19,14 @@ namespace C_SHARP_LABS.Command
 			List<ILanguage> languageList = new List<ILanguage>();
 			for (int i = 0; i < languages.Count; i++)
 			{
-				if (!(languages[i] is ProgrammingLanguageBase))
-					continue;
-
 				for (int j = 0; j < parameters.Count; j++)
 				{
-					if (parameters[j].ToLower() == (languages[i] as ProgrammingLanguageBase).title.Substring(0, parameters[j].Length).ToLower())
-					{
-						languageList.Add(languages[i]);
+					if (parameters[j].Length > (languages[i] as LanguageBase).title.Length)
 						continue;
-					}
+
+					if (parameters[j].ToLower() == (languages[i] as LanguageBase).title.Substring(0, parameters[j].Length).ToLower())
+						languageList.Add(languages[i]);
 				}
-				//if (parameters.Contains((languages[i] as ProgrammingLanguageBase).title))
-				//	languageList.Add(languages[i]);
 			}
 
 			return languageList;

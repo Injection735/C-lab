@@ -6,20 +6,10 @@ using System.Threading.Tasks;
 
 namespace C_SHARP_LABS.Language
 {
-	class AccessoryLanguage : ILanguage
+	class AccessoryLanguage : LanguageBase
 	{
-		public readonly string paradigm = "NONE";
-
-		public string title;
-		public string date;
-
-		public AccessoryLanguage(string title, string date = "")
+		public AccessoryLanguage(string title, string date) : base(title, date)
 		{
-			this.title = title;	
-			this.date = date;
 		}
-
-		public string GetData => title + " " + date;
-		
 	}
 }

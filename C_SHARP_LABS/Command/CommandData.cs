@@ -12,6 +12,7 @@ namespace C_SHARP_LABS.Command
 		public const string TITLE = "title";
 		public const string PARADIGM = "paradigm";
 		public const string DATE = "date";
+		public const string HELP = "help";
 
 		public static void init()
 		{
@@ -24,6 +25,7 @@ namespace C_SHARP_LABS.Command
 				new CommandError().Excecute();
 				return;
 			}
+
 			List<ILanguage> languages = LanguageData.GetAllLanguages();
 
 			foreach (ICommand command in commands)
@@ -46,6 +48,9 @@ namespace C_SHARP_LABS.Command
 				case "d":
 				case DATE:
 					return new CommandDate(type, parameters);
+				case "h":
+				case HELP:
+					return new CommandHelp();
 				default:
 					return new CommandError();
 			}

@@ -30,6 +30,7 @@ namespace C_SHARP_LABS.Command
 					i--;
 				}
 			}
+
 			CommandData.ExcecuteCommand(commands);
 		}
 

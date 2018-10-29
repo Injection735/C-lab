@@ -18,9 +18,9 @@ namespace C_SHARP_LABS.Command
 			List<ILanguage> languageList = new List<ILanguage>();
 			for (int i = 0; i < languages.Count; i++)
 			{
-				if (!(languages[i] is ProgrammingLanguageBase))
+				if (!(languages[i] is LanguageBase))
 					continue;
-				if (parameters.Contains((languages[i] as ProgrammingLanguageBase).date))
+				if (parameters.Contains((languages[i] as LanguageBase).date))
 					languageList.Add(languages[i]);
 			}
 

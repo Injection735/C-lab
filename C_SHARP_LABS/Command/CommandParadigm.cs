@@ -18,10 +18,10 @@ namespace C_SHARP_LABS.Command
 			List<ILanguage> languageList = new List<ILanguage>();
 			for (int i = 0; i < languages.Count; i++)
 			{
-				if (!(languages[i] is ProgrammingLanguageBase))
+				if (!(languages[i] is ProgrammingLanguage))
 					continue;
 
-				if (parameters.Contains((languages[i] as ProgrammingLanguageBase).paradigm) || parameters.Count == 0)
+				if (parameters.Contains((languages[i] as ProgrammingLanguage).paradigm) || parameters.Count == 0)
 					languageList.Add(languages[i]);
 			}
 
