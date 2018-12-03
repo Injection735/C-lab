@@ -8,6 +8,8 @@ namespace C_SHARP_LABS.Language
 {
 	interface ILanguage
 	{
-		string GetData { get; }
+		string GetData();
+		int GetDate();
+		string GetName();
 	}
 }

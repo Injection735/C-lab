@@ -43,20 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command\CommandAll.cs" />
-    <Compile Include="Command\CommandBase.cs" />
-    <Compile Include="Command\CommandData.cs" />
-    <Compile Include="Command\CommandError.cs" />
-    <Compile Include="Command\CommandDate.cs" />
-    <Compile Include="Command\CommandHelp.cs" />
-    <Compile Include="Command\CommandTitle.cs" />
-    <Compile Include="Command\CommandParadigm.cs" />
-    <Compile Include="Command\CommandParser.cs" />
-    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="LanguageAuthor\AuthorData.cs" />
+    <Compile Include="LanguageAuthor\IAuthor.cs" />
+    <Compile Include="LanguageAuthor\LanguageAuthor.cs" />
+    <Compile Include="LanguageAuthor\LanguageAuthorBase.cs" />
+    <Compile Include="LanguageAuthor\LanguageAuthorCompany.cs" />
     <Compile Include="Language\AccessoryLanguage.cs" />
+    <Compile Include="Language\AccessoryLanguageData.cs" />
+    <Compile Include="Language\ChangeLog.cs" />
     <Compile Include="Language\ILanguage.cs" />
     <Compile Include="Language\LanguageBase.cs" />
     <Compile Include="Language\LanguageData.cs" />
+    <Compile Include="Language\ProgrammingLanguageData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Language\ProgrammingLanguage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

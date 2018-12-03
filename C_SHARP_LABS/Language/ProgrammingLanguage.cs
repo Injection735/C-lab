@@ -1,4 +1,5 @@
-﻿using System;
+﻿using C_SHARP_LABS.LanguageAuthor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +9,20 @@ namespace C_SHARP_LABS.Language
 {
 	class ProgrammingLanguage : LanguageBase
 	{
-		public string paradigm;
+		public ILanguage parentLanguage;
 
-		public ProgrammingLanguage(string title, string paradigm, string date) : base(title, date)
+		public string paradigm;
+		public string typification;
+
+		public ProgrammingLanguage(string languageName, int creationYear, string paradigm, string typification) : base(languageName, creationYear)
 		{
-			this.paradigm = paradigm.ToLower();
+			this.paradigm = paradigm;
+			this.typification = typification;
 		}
 
-		public override string GetData => title + " " + paradigm + " " + date;
+		public override string GetData() => languageName + " " + creationYear + " " + paradigm + " " + typification + "\n";
+		
+		public string GetTypification() => typification;
+		public string GetParadigm() => paradigm;
 	}
 }

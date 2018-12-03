@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_SHARP_LABS.Command
+namespace C_SHARP_LABS.LanguageAuthor
 {
-	interface ICommand
+	interface IAuthor
 	{
-		List<ILanguage> Excecute(List<ILanguage> languages);
+		string GetData();
+		ILanguage CreateLanguage(string languageName, int creationYear, Object data);
 	}
 }

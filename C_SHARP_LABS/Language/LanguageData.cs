@@ -1,4 +1,5 @@
-﻿using System;
+﻿using C_SHARP_LABS.LanguageAuthor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,42 +9,43 @@ namespace C_SHARP_LABS.Language
 {
 	static class LanguageData
 	{
+		public const int NONE = -1;
+		
 		private static List<ILanguage> languageList;
 
 		public static void init()
 		{
 			languageList = new List<ILanguage>();
 
-			languageList.Add(new AccessoryLanguage("Z2", "01"));
-			languageList.Add(new AccessoryLanguage("X2", "02"));
-			languageList.Add(new AccessoryLanguage("Y2", "03"));
-			languageList.Add(new AccessoryLanguage("Z1", "04"));
-			languageList.Add(new AccessoryLanguage("X1", "05"));
-			languageList.Add(new AccessoryLanguage("Y1", "06"));
+			languageList.Add(new AccessoryLanguage("HTML", 1993, "Markup language", "W3C HTML 5.2"));
+			languageList.Add(new AccessoryLanguage("JSON", 2000, "Data exchange", "RFC 8259"));
 
-			languageList.Add(new ProgrammingLanguage("A1", "OOP", "1987"));
-			languageList.Add(new ProgrammingLanguage("A2", "Logic", "1985"));
-			languageList.Add(new ProgrammingLanguage("A3", "Functional", "1977"));
-			languageList.Add(new ProgrammingLanguage("A4", "OOP", "1989"));
-			languageList.Add(new ProgrammingLanguage("A5", "Logic", "1999"));
-			languageList.Add(new ProgrammingLanguage("A6", "Functional", "1995"));
-			languageList.Add(new ProgrammingLanguage("A7", "OOP", "2003"));
-			languageList.Add(new ProgrammingLanguage("B1", "Logic", "2005"));
-			languageList.Add(new ProgrammingLanguage("B2", "Functional", "2011"));
-			languageList.Add(new ProgrammingLanguage("B3", "OOP", "1983"));
-			languageList.Add(new ProgrammingLanguage("B4", "Logic", "2006"));
-			languageList.Add(new ProgrammingLanguage("B5", "Functional", "2015"));
-			languageList.Add(new ProgrammingLanguage("B6", "OOP", "1990"));
-			languageList.Add(new ProgrammingLanguage("B7", "Logic", "1984"));
-			languageList.Add(new ProgrammingLanguage("B8", "Functional", "1997"));
+			languageList.Add(new ProgrammingLanguage("C++", 1983, "OOP", "static strong"));
+			languageList.Add(new ProgrammingLanguage("C#", 2000, "OOP", "static strong"));
+			languageList.Add(new ProgrammingLanguage("Prolog", 1972, "Functional", "no typefication"));
 		}
 
-		public static List<ILanguage> GetAllLanguages()
+		public static List<ILanguage> languages
 		{
-			if (languageList == null)
-				init();
+			get
+			{
+				if (languageList == null)
+					init();
+				return languageList;
+			}
+			set
+			{
+				languageList = value;
+			}
+		}
 
-			return languageList;			
+		public static int findIndexByName(string name)
+		{
+			for (int i = 0; i < languageList.Count; i++)
+				if (languageList[i].GetName() == name)
+					return i;
+
+			return NONE;
 		}
 	}
 }
